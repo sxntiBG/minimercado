@@ -8,8 +8,7 @@ La aplicación permite agregar productos a un carrito de compras. Cada producto 
 ---
 
 ## 📷 Vista del Proyecto  
-![Vista del Proyecto](image.png)
-
+![Vista del Proyecto](assets/img/image.png)
 ---
 
 ## ✨ Características Principales  

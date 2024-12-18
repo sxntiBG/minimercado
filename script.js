@@ -1,19 +1,40 @@
-function adicionarProducto(nombreProducto){
-    let price = parseFloat(document.getElementById(`${nombreProducto}-price`).textContent);
-    let cant = parseInt(document.getElementById(`${nombreProducto}-cant`).textContent);
-
-    cant++;
-    let total = price * cant;
+function gestionProductos(nombreProducto, accion){
     
-    document.getElementById(`${nombreProducto}-cant`).innerHTML = cant;
-    document.getElementById(`${nombreProducto}-total`).innerHTML = total;
+    if(accion === 'adicionar'){
+        let precio = parseFloat(document.getElementById(`${nombreProducto}-precio`).textContent);
+        let cant = parseInt(document.getElementById(`${nombreProducto}-cant`).textContent);
+    
+        cant++;
+        let total = precio * cant;
+        
+        document.getElementById(`${nombreProducto}-cant`).innerHTML = cant;
+        document.getElementById(`${nombreProducto}-total`).innerHTML = total;
+    
+    }else if(accion === 'descontar'){
+        let precio = parseFloat(document.getElementById(`${nombreProducto}-precio`).textContent);
+        let cant = parseInt(document.getElementById(`${nombreProducto}-cant`).textContent);
 
-    precioFinal(total);
+        if(cant > 0){
+            cant--;
+        }
+
+        let total = precio * cant;
+        
+        document.getElementById(`${nombreProducto}-cant`).innerHTML = cant;
+        document.getElementById(`${nombreProducto}-total`).innerHTML = total;
+    
+    }
+
+    precioFinal();
 }
 
-function precioFinal(total){
-    let valorTotal = parseFloat(document.getElementById('total').value) || 0;
-    document.getElementById('total').value = valorTotal + total;
+function precioFinal(){
+    const productos = ['hamburguesa', 'pizza', 'huevo', 'queso', 'tocino', 'chocolate', 'manzana', 'cereza', 'pan', 'banano'];
+    let suma = 0;
+    productos.forEach(producto => {
+        suma += parseFloat(document.getElementById(`${producto}-total`).textContent);
+    });
+    document.getElementById('total').value = suma;
 }
 
 function cambio(){

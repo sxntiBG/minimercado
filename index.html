@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/img/favicon-32x32.png" type="image/x-icon">
 </head>
 <body>
     <div class="container">
         <div class="container1">
             <div class="productos">
-                <button id="button-burguer" onclick="adicionarProducto('burger')">🍔</button>
-                <button id="button-pizza" onclick="adicionarProducto('pizza')">🍕</button>
-                <button id="button-egg" onclick="adicionarProducto('egg')">🥚</button>
-                <button id="button-chesse" onclick="adicionarProducto('chesse')">🧀</button>
-                <button id="button-bacon" onclick="adicionarProducto('bacon')">🥓</button>
-                <button id="button-chocolate" onclick="adicionarProducto('chocolate')">🍫</button>
-                <button id="button-apple" onclick="adicionarProducto('apple')">🍎</button>
-                <button id="button-cherry" onclick="adicionarProducto('cherry')">🍒</button>
-                <button id="button-bread" onclick="adicionarProducto('bread')">🥖</button>
-                <button id="button-banana" onclick="adicionarProducto('banana')">🍌</button>
+                <button class="productos-button" id="button-hamburguesa" onclick="gestionProductos('hamburguesa', 'adicionar')">🍔</button>
+                <button class="productos-button" id="button-pizza" onclick="gestionProductos('pizza', 'adicionar')">🍕</button>
+                <button class="productos-button" id="button-huevo" onclick="gestionProductos('huevo', 'adicionar')">🥚</button>
+                <button class="productos-button" id="button-queso" onclick="gestionProductos('queso', 'adicionar')">🧀</button>
+                <button class="productos-button" id="button-tocino" onclick="gestionProductos('tocino', 'adicionar')">🥓</button>
+                <button class="productos-button" id="button-chocolate" onclick="gestionProductos('chocolate', 'adicionar')">🍫</button>
+                <button class="productos-button" id="button-manzana" onclick="gestionProductos('manzana', 'adicionar')">🍎</button>
+                <button class="productos-button" id="button-cereza" onclick="gestionProductos('cereza', 'adicionar')">🍒</button>
+                <button class="productos-button" id="button-pan" onclick="gestionProductos('pan', 'adicionar')">🥖</button>
+                <button class="productos-button" id="button-banano" onclick="gestionProductos('banano', 'adicionar')">🍌</button>
             </div>
         </div>
         <div class="container2">
@@ -33,68 +34,79 @@
                                 <th>Precio/Unidad:</th>
                                 <th>Cantidad:</th>
                                 <th>Subtotal:</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>🍔</td>
-                                <td id="burger-price">15000</td>
-                                <td id="burger-cant">0</td>
-                                <td id="burger-total">0</td>
+                                <td id="hamburguesa-precio">15000</td>
+                                <td id="hamburguesa-cant">0</td>
+                                <td id="hamburguesa-total">0</td>
+                                <td><button class="menos-button" onclick="gestionProductos('hamburguesa', 'descontar')">➖</button></td>
                             </tr>
                             <tr>
                                 <td>🍕</td>
-                                <td id="pizza-price">6000</td>
+                                <td id="pizza-precio">6000</td>
                                 <td id="pizza-cant">0</td>
                                 <td id="pizza-total">0</td>
+                                <td><button class="menos-button" onclick="gestionProductos('pizza', 'descontar')">➖</button></td>
                             </tr>
                             <tr>
                                 <td>🥚</td>
-                                <td id="egg-price">600</td>
-                                <td id="egg-cant">0</td>
-                                <td id="egg-total">0</td>
+                                <td id="huevo-precio">600</td>
+                                <td id="huevo-cant">0</td>
+                                <td id="huevo-total">0</td>
+                                <td><button class="menos-button" onclick="gestionProductos('huevo', 'descontar')">➖</button></td>
                             </tr>
                             <tr>
                                 <td>🧀</td>
-                                <td id="chesse-price">3500</td>
-                                <td id="chesse-cant">0</td>
-                                <td id="chesse-total">0</td>
+                                <td id="queso-precio">3500</td>
+                                <td id="queso-cant">0</td>
+                                <td id="queso-total">0</td>
+                                <td><button class="menos-button" onclick="gestionProductos('queso', 'descontar')">➖</button></td>
                             </tr>
                             <tr>
                                 <td>🥓</td>
-                                <td id="bacon-price">12000</td>
-                                <td id="bacon-cant">0</td>
-                                <td id="bacon-total">0</td>
+                                <td id="tocino-precio">12000</td>
+                                <td id="tocino-cant">0</td>
+                                <td id="tocino-total">0</td>
+                                <td><button class="menos-button" onclick="gestionProductos('tocino', 'descontar')">➖</button></td>
                             </tr>
                             <tr>
                                 <td>🍫</td>
-                                <td id="chocolate-price">4000</td>
+                                <td id="chocolate-precio">4000</td>
                                 <td id="chocolate-cant">0</td>
                                 <td id="chocolate-total">0</td>
+                                <td><button class="menos-button" onclick="gestionProductos('chocolate', 'descontar')">➖</button></td>
                             </tr>
                             <tr>
                                 <td>🍎</td>
-                                <td id="apple-price">1500</td>
-                                <td id="apple-cant">0</td>
-                                <td id="apple-total">0</td>
+                                <td id="manzana-precio">1500</td>
+                                <td id="manzana-cant">0</td>
+                                <td id="manzana-total">0</td>
+                                <td><button class="menos-button" onclick="gestionProductos('manzana', 'descontar')">➖</button></td>
                             </tr>
                             <tr>
                                 <td>🍒</td>
-                                <td id="cherry-price">2000</td>
-                                <td id="cherry-cant">0</td>
-                                <td id="cherry-total">0</td>
+                                <td id="cereza-precio">2000</td>
+                                <td id="cereza-cant">0</td>
+                                <td id="cereza-total">0</td>
+                                <td><button class="menos-button" onclick="gestionProductos('cereza', 'descontar')">➖</button></td>
                             </tr>
                             <tr>
                                 <td>🥖</td>
-                                <td id="bread-price">4500</td>
-                                <td id="bread-cant">0</td>
-                                <td id="bread-total">0</td>
+                                <td id="pan-precio">4500</td>
+                                <td id="pan-cant">0</td>
+                                <td id="pan-total">0</td>
+                                <td><button class="menos-button" onclick="gestionProductos('pan', 'descontar')">➖</button></td>
                             </tr>
                             <tr>
                                 <td>🍌</td>
-                                <td id="banana-price">700</td>
-                                <td id="banana-cant">0</td>
-                                <td id="banana-total">0</td>
+                                <td id="banano-precio">700</td>
+                                <td id="banano-cant">0</td>
+                                <td id="banano-total">0</td>
+                                <td><button class="menos-button" onclick="gestionProductos('banano', 'descontar')">➖</button></td>
                             </tr>
                         </tbody>
                     </table>

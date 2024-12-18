@@ -32,7 +32,7 @@
     border-radius: 20px;
 }
 
-button{
+.productos-button{
     padding: 30px;
     font-size: 30px;
     border: none;
@@ -41,7 +41,7 @@ button{
     background-color: #dcffff;
 }
 
-button:hover{
+.productos-button:hover{
     background-color: #6a9eda;
 }
 
@@ -82,6 +82,18 @@ table{
 
 td{
     text-align: center;
+}
+
+.menos-button{
+    background-color: #b2dafa;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.menos-button:hover{
+    background-color: white;
 }
 
 label{
