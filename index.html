@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container1">
+            <div class="productos">
+                <button id="button-burguer" onclick="adicionarProducto('burger')">🍔</button>
+                <button id="button-pizza" onclick="adicionarProducto('pizza')">🍕</button>
+                <button id="button-egg" onclick="adicionarProducto('egg')">🥚</button>
+                <button id="button-chesse" onclick="adicionarProducto('chesse')">🧀</button>
+                <button id="button-bacon" onclick="adicionarProducto('bacon')">🥓</button>
+                <button id="button-chocolate" onclick="adicionarProducto('chocolate')">🍫</button>
+                <button id="button-apple" onclick="adicionarProducto('apple')">🍎</button>
+                <button id="button-cherry" onclick="adicionarProducto('cherry')">🍒</button>
+                <button id="button-bread" onclick="adicionarProducto('bread')">🥖</button>
+                <button id="button-banana" onclick="adicionarProducto('banana')">🍌</button>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="carrito">
+                <h2>🛒:</h2>
+                <div class="productos-carrito">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Producto:</th>
+                                <th>Precio/Unidad:</th>
+                                <th>Cantidad:</th>
+                                <th>Subtotal:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>🍔</td>
+                                <td id="burger-price">15000</td>
+                                <td id="burger-cant">0</td>
+                                <td id="burger-total">0</td>
+                            </tr>
+                            <tr>
+                                <td>🍕</td>
+                                <td id="pizza-price">6000</td>
+                                <td id="pizza-cant">0</td>
+                                <td id="pizza-total">0</td>
+                            </tr>
+                            <tr>
+                                <td>🥚</td>
+                                <td id="egg-price">600</td>
+                                <td id="egg-cant">0</td>
+                                <td id="egg-total">0</td>
+                            </tr>
+                            <tr>
+                                <td>🧀</td>
+                                <td id="chesse-price">3500</td>
+                                <td id="chesse-cant">0</td>
+                                <td id="chesse-total">0</td>
+                            </tr>
+                            <tr>
+                                <td>🥓</td>
+                                <td id="bacon-price">12000</td>
+                                <td id="bacon-cant">0</td>
+                                <td id="bacon-total">0</td>
+                            </tr>
+                            <tr>
+                                <td>🍫</td>
+                                <td id="chocolate-price">4000</td>
+                                <td id="chocolate-cant">0</td>
+                                <td id="chocolate-total">0</td>
+                            </tr>
+                            <tr>
+                                <td>🍎</td>
+                                <td id="apple-price">1500</td>
+                                <td id="apple-cant">0</td>
+                                <td id="apple-total">0</td>
+                            </tr>
+                            <tr>
+                                <td>🍒</td>
+                                <td id="cherry-price">2000</td>
+                                <td id="cherry-cant">0</td>
+                                <td id="cherry-total">0</td>
+                            </tr>
+                            <tr>
+                                <td>🥖</td>
+                                <td id="bread-price">4500</td>
+                                <td id="bread-cant">0</td>
+                                <td id="bread-total">0</td>
+                            </tr>
+                            <tr>
+                                <td>🍌</td>
+                                <td id="banana-price">700</td>
+                                <td id="banana-cant">0</td>
+                                <td id="banana-total">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="caja">
+                <label for="">Total:</label>
+                <input type="number" disabled id="total">
+                <label for="">Pago:</label>
+                <input type="number" id="pago" onchange="cambio()">
+                <label for="">Cambio:</label>
+                <input type="number" disabled id="cambio">
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
